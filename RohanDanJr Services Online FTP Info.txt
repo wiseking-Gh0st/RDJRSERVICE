@@ -1,0 +1,14 @@
+RohanDanJr Services Online 
+
+FTP INFO
+
+FTP USERNAME
+if0_36641247
+
+FTP PASSWORD
+0cPOd7Xu6XpBY
+FTP HOSTNAME
+ftpupload.net
+
+FTP PORT (OPTIONAL)
+21

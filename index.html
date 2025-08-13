@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rohandanjr's Shopping Services</title>
+    
+    <!-- Embed CSS here for simplicity -->
+    <style>
+        /* Reset & base */
+        * {
+            box-sizing: border-box;
+            font-family: 'Arial', Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #111; /* deep black for background */
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        a {
+            color: #e31b23; /* bright red links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background: #e31b23; /* red banner */
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #fff;
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+        header .logo img {
+            height: 50px;
+            margin-right: 12px;
+        }
+        header .logo h1 {
+            font-size: 1.8rem;
+            color: white;
+            letter-spacing: 2px;
+            user-select: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            color: #fff;
+        }
+        nav ul li a {
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        /* Main content */
+        main {
+            max-width: 1200px;
+            margin: 40px auto 80px;
+            padding: 0 20px;
+            color: #eee;
+        }
+
+        /* Slogan section */
+        .slogan {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e31b23; /* red */
+            margin-bottom: 25px;
+            user-select: none;
+        }
+
+        /* Info paragraph */
+        .info-text {
+            background: #222;
+            padding: 20px;
+            border-left: 6px solid #e31b23;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        /* Contact and Payment info list */
+        .details-list {
+            list-style: none;
+            margin-bottom: 40px;
+            color: white;
+        }
+        .details-list li {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .details-list li span {
+            color: #e31b23; /* highlight important words */
+            font-weight: 700;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .social-icons a img {
+            width: 50px;
+            height: 50px;
+            filter: brightness(0) invert(1);
+            transition: filter 0.3s;
+        }
+        .social-icons a:hover img {
+            filter: brightness(0) invert(0.5) sepia(1) saturate(6) hue-rotate(345deg);
+            /* gives red-ish hover effect */
+        }
+
+        /* Carousel styles */
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 3px solid #e31b23;
+            border-radius: 10px;
+            background: #222;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border: 3px solid #e31b23;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 0 15px #e31b23;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Carousel nav buttons */
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-btn {
+            background: rgba(227, 27, 35, 0.8);
+            border: none;
+            color: white;
+            padding: 12px 18px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 18px;
+            transition: background 0.3s;
+            user-select: none;
+        }
+        .carousel-btn:hover {
+            background: #fff;
+            color: #e31b23;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 20px 10px;
+            border-top: 3px solid #e31b23;
+            font-size: 14px;
+            color: #bbb;
+            user-select: none;
+        }
+
+        footer a {
+            color: #e31b23;
+            font-weight: bold;
+        }
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 10px;
+            }
+            main {
+                margin: 20px 15px 50px;
+            }
+            .carousel-slide img {
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <!-- Replace 'logo.png' with the actual logo file path -->
+        <img src="ROHANDANJR.jpg" alt="Rohandanjr's Shopping Services Logo" />
+        <h1>Rohandanjr's Shopping Services</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Socials.html">SOCIALS</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="mailto:rohandanjr@gmail.com">EMAIL</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <p class="slogan">Anything you want, say it &amp; we order it.</p>
+
+    <section class="info-text">
+        <p><strong>Delivery Wait Time:</strong> 2 - 3 weeks once the product has been shipped to our company.
+            <br/>Express Delivery is available for an additional fee. Thank you for understanding.</p>
+    </section>
+
+    <section>
+        <ul class="details-list">
+            <li><span>Transportation Modes:</span> Plane &amp; Ship</li>
+            <li><span>Payment Methods:</span> Direct bank transfers, Mobile Money (Flow, Digicel), PayPal, and other reliable options.</li>
+            <li><span>Contact Phone:</span> 1 (876) 232-5047</li>
+            <li><span>Email:</span> <a href="mailto:rohandanjr@gmail.com">rohandanjr@gmail.com</a></li>
+        </ul>
+    </section>
+
+    <section class="social-icons" aria-label="Social Media Links">
+        <a href="https://www.instagram.com/rohandanjrshoppingservices?utm_source=ig_web_button_share_sheet&igsh=bGMydmZjeXd0cjBp" target="_blank" rel="noopener noreferrer">
+            <img src="instagram.jpeg" alt="Instagram" />
+        </a>
+    </section>
+
+    <!-- Carousel Section -->
+    <section>
+        <h2 style="text-align:center; margin-bottom: 20px; color: #e31b23;">Previous Orders Showcase</h2>
+        <div class="carousel-container" aria-label="Carousel of previous orders">
+            <div class="carousel-slide" id="carousel-slide">
+                <img src="IMG-20250809-WA0001.jpg" alt="Previous order 1" />
+                <img src="IMG-20250809-WA0002.jpg" alt="Previous order 2" />
+                <img src="IMG-20250809-WA0003.jpg" alt="Previous order 3" />
+                <img src="IMG-20250809-WA0004.jpg" alt="Previous order 4" />
+                <img src="IMG-20250809-WA0005.jpg" alt="Previous order 5" />
+                <img src="IMG-20250809-WA0006.jpg" alt="Previous order 6" />
+                <!-- Add or remove images as necessary -->
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-btn" id="prevBtn" aria-label="Previous orders">&lt;</button>
+                <button class="carousel-btn" id="nextBtn" aria-label="Next orders">&gt;</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    2024 &copy; Rohandanjr's Shopping Services. | Created by <a href="mailto:ophionwebdev@example.com">ophionwebdev</a>
+</footer>
+
+<script>
+    // Basic Carousel Functionality
+    const carouselSlide = document.getElementById('carousel-slide');
+const carouselImages = carouselSlide.querySelectorAll('img');
+
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let counter = 0;
+// Use a variable that can be updated on resize
+let imageWidth = carouselImages[0].clientWidth + 20; // image width + margin
+
+function updateCarousel() {
+    carouselSlide.style.transform = `translateX(${-counter * imageWidth}px)`;
+}
+
+// Next button click with loop
+nextBtn.addEventListener('click', () => {
+    // Maximum starting index to keep 3 images visible at once
+    const maxCounter = carouselImages.length - 3;
+    if (counter >= maxCounter) {
+        counter = 0; // Loop to first
+    } else {
+        counter++;
+    }
+    updateCarousel();
+});
+
+// Previous button click with loop
+prevBtn.addEventListener('click', () => {
+    if (counter <= 0) {
+        counter = carouselImages.length - 3; // Loop to last visible set
+    } else {
+        counter--;
+    }
+    updateCarousel();
+});
+
+// Responsive recalculation on window resize
+window.addEventListener('resize', () => {
+    imageWidth = carouselImages[0].clientWidth + 20;
+    updateCarousel();
+});
+
+</script>
+
+</body>
+</html>
