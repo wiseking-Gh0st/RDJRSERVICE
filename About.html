@@ -94,7 +94,12 @@
   footer a:hover {
     text-decoration: underline;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
+    nav ul {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 10px;
+            }
     .profile-container {
       flex-direction: column;
       align-items: center;
@@ -103,6 +108,9 @@
     .profile-text {
       flex: none;
     }
+    main {
+                margin: 20px 15px 50px;
+            }
   }
 </style>
 </head>
@@ -139,3 +147,4 @@
 </footer>
 </body>
 </html>
+
