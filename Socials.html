@@ -93,13 +93,20 @@
   footer a:hover {
     text-decoration: underline;
   }
-  @media (max-width: 600px) {
-    .social-links {
-      flex-direction: column;
-      gap: 25px;
-      align-items: center;
-    }
-  }
+  /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 10px;
+            }
+            main {
+                margin: 20px 15px 50px;
+            }
+            .carousel-slide img {
+                max-width: 200px;
+            }
+        }
 </style>
 </head>
 <body>
@@ -133,3 +140,4 @@
 </footer>
 </body>
 </html>
+
